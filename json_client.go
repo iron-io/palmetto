@@ -10,7 +10,7 @@ type jsonClient struct {
 	srvURL string
 }
 
-func JSONClient(srvURL string) *jsonClient {
+func JSONClient(srvURL string) Client {
 	return &jsonClient{srvURL: srvURL}
 }
 
@@ -40,5 +40,6 @@ func (c *jsonClient) Get(key string) (*PlainResult, error) {
 }
 
 func (c *jsonClient) Put(key string, val []byte) (*PlainResult, error) {
+
 	return nil, ErrNotFound
 }
